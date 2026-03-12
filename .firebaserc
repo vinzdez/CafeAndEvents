@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "cafe-event-platform",
+    "development": "cafe-event-platform-dev",
+    "production": "cafe-event-platform"
+  },
+  "targets": {},
+  "etags": {}
+}
