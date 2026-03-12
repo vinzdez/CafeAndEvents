@@ -32,6 +32,10 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.local.example
+
+# Override global gitignore — track project app/ directory
+!app/
 
 # vercel
 .vercel
