@@ -15,7 +15,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center overflow-hidden bg-stone-900">
       {/* Background image */}
       <Image
-        src="/events/event-1.jpg"
+        src="/hero.png"
         alt="Trail runner on a mountain"
         fill
         priority

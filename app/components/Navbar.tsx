@@ -26,7 +26,7 @@ export default function Navbar() {
             alt="AID Station Cafe"
             width={44}
             height={44}
-            className="mix-blend-screen"
+            className=""
           />
           <span className="text-sm font-bold tracking-[0.15em] text-white uppercase">
             AID Station Cafe
