@@ -5,7 +5,7 @@ service cloud.firestore {
     // Events: Public read, admin write
     match /events/{eventId} {
       allow read: if true;
-      allow write: if false; // TODO: implement admin check
+      allow write: if false; // TODO ADM-01: replace with isAdmin() once Firebase Auth + custom claims are set up
     }
 
     // Temporary: allow all for development
