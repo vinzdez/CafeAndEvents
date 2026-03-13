@@ -11,16 +11,16 @@ export const CAFE = {
     { label: "Community Hub", icon: "🤝" },
   ],
   contact: {
-    address: "123 Trailhead Ave, Makati City, Metro Manila",
+    address: "Pico, La Trinidad, Benguet, La Trinidad, Philippines, 2601",
     phone: "+63 917 123 4567",
     email: "hello@brewandstride.ph",
     hours: {
-      weekdays: "Mon–Fri: 6:00 AM – 8:00 PM",
-      weekends: "Sat–Sun: 5:30 AM – 9:00 PM",
+      weekdays: "Mon–Sat: 9:00 AM – 10:00 PM",
+      weekends: "Sun: 1:00 PM – 10:00 PM",
     },
   },
   social: {
     instagram: "#",
-    facebook: "#",
+    facebook: "https://www.facebook.com/profile.php?id=100057368991920",
   },
 } as const;
