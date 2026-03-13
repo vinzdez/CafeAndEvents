@@ -19,33 +19,34 @@ export default function Hero() {
         backgroundPosition: "center",
       }}
     >
-      {/* Dark gradient overlay — stronger on left for text legibility */}
+      {/* Dark gradient overlay — heavier on mobile for readability */}
+      <div className="absolute inset-0 bg-stone-900/60 sm:bg-transparent" />
       <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/60 to-stone-900/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
 
       {/* Content — left aligned */}
-      <div className="relative z-10 mx-auto max-w-7xl w-full px-6 pt-28 pb-20">
+      <div className="relative z-10 mx-auto max-w-7xl w-full px-4 sm:px-6 pt-24 sm:pt-28 pb-16 sm:pb-20">
         <div className="max-w-xl">
           {/* Category badge */}
-          <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/50 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-amber-400 uppercase mb-8">
+          <span className="inline-flex items-center gap-2 rounded-full border border-amber-500/50 bg-amber-500/10 px-3 sm:px-4 py-1.5 text-xs font-semibold tracking-widest text-amber-400 uppercase mb-6 sm:mb-8">
             Coffee &amp; Trail Runs
           </span>
 
           {/* Headline */}
-          <h1 className="text-5xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-7xl">
             Fuel Your Run.
             <br />
             Finish With Coffee.
           </h1>
 
           {/* Subheading */}
-          <p className="mt-6 text-lg text-stone-300 leading-relaxed max-w-md">
+          <p className="mt-4 sm:mt-6 text-base sm:text-lg text-stone-300 leading-relaxed max-w-md">
             Trail running community events and specialty coffee
             in the heart of the mountains.
           </p>
 
           {/* CTAs */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4">
             <a
               href="#events"
               className="inline-flex items-center justify-center rounded-full bg-amber-500 px-8 py-3.5 text-sm font-bold text-stone-900 shadow-lg transition-colors hover:bg-amber-400"
@@ -61,11 +62,11 @@ export default function Hero() {
           </div>
 
           {/* Feature badges */}
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 sm:mt-10 flex flex-wrap gap-2 sm:gap-4">
             {FEATURES.map((f) => (
               <span
                 key={f.label}
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 px-4 py-2 text-sm text-white/80"
+                className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 px-3 sm:px-4 py-2 text-xs sm:text-sm text-white/80"
               >
                 <span>{f.icon}</span>
                 {f.label}
