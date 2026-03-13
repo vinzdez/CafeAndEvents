@@ -19,14 +19,13 @@ interface GalleryItem {
   height: number;
 }
 
-// Placeholder gallery items — replace src values with real Firebase Storage URLs
 const GALLERY_ITEMS: GalleryItem[] = [
-  { src: "/gallery/cafe-1.jpg", alt: "Cafe interior with warm lighting", width: 800, height: 600 },
-  { src: "/gallery/cafe-2.jpg", alt: "Barista preparing espresso", width: 800, height: 600 },
-  { src: "/gallery/cafe-3.jpg", alt: "Latte art close-up", width: 800, height: 600 },
-  { src: "/gallery/cafe-4.jpg", alt: "Outdoor seating area", width: 800, height: 600 },
-  { src: "/gallery/cafe-5.jpg", alt: "Post-run breakfast spread", width: 800, height: 600 },
-  { src: "/gallery/cafe-6.jpg", alt: "Community event at the cafe", width: 800, height: 600 },
+  { src: "/gallery/cafe-1.jpg", alt: "AID Station Cafe — community vibes", width: 800, height: 600 },
+  { src: "/gallery/cafe-2.jpg", alt: "Post-ride coffee and good company", width: 800, height: 600 },
+  { src: "/gallery/cafe-3.jpg", alt: "Fueling up before the race", width: 800, height: 600 },
+  { src: "/gallery/cafe-4.jpg", alt: "Our crew at the cafe", width: 800, height: 600 },
+  { src: "/gallery/cafe-5.jpg", alt: "Race day energy at AID Station", width: 800, height: 600 },
+  { src: "/gallery/cafe-6.jpg", alt: "Runners and riders welcome here", width: 800, height: 600 },
 ];
 
 export default function Gallery() {

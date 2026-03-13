@@ -7,8 +7,12 @@
  * @satisfies CAF-01-01-AC-05 Page is fully responsive (mobile, tablet, desktop)
  */
 
+import Image from "next/image";
 import { useEvents } from "@/app/lib/hooks/useEvents";
 import type { EventCategory } from "@/app/lib/types/event";
+
+// Cycle through available event images (repeats if more events than images)
+const EVENT_IMAGES = ["/events/event-1.jpg", "/events/event-2.jpg"];
 
 const CATEGORY_LABELS: Record<EventCategory, string> = {
   running: "Running",
@@ -39,11 +43,14 @@ function formatFee(fee: number): string {
 
 function EventCardSkeleton() {
   return (
-    <div className="animate-pulse rounded-2xl border border-stone-100 bg-white p-6 shadow-sm">
-      <div className="h-5 w-20 rounded-full bg-stone-200" />
-      <div className="mt-4 h-6 w-3/4 rounded bg-stone-200" />
-      <div className="mt-2 h-4 w-1/2 rounded bg-stone-200" />
-      <div className="mt-6 h-10 w-full rounded-full bg-stone-200" />
+    <div className="animate-pulse rounded-2xl border border-stone-100 bg-white overflow-hidden shadow-sm">
+      <div className="h-44 w-full bg-stone-200" />
+      <div className="p-6">
+        <div className="h-5 w-20 rounded-full bg-stone-200" />
+        <div className="mt-4 h-6 w-3/4 rounded bg-stone-200" />
+        <div className="mt-2 h-4 w-1/2 rounded bg-stone-200" />
+        <div className="mt-6 h-10 w-full rounded-full bg-stone-200" />
+      </div>
     </div>
   );
 }
@@ -98,17 +105,29 @@ export default function EventsSection() {
             {events.map((event) => (
               <div
                 key={event.id}
-                className="group flex flex-col rounded-2xl border border-stone-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
+                className="group flex flex-col rounded-2xl border border-stone-100 bg-white overflow-hidden shadow-sm transition-shadow hover:shadow-md"
               >
-                {/* Category badge */}
-                <span
-                  className={`self-start rounded-full px-3 py-1 text-xs font-semibold ${CATEGORY_COLORS[event.category]}`}
-                >
-                  {CATEGORY_LABELS[event.category]}
-                </span>
+                {/* Event image */}
+                <div className="relative h-44 w-full overflow-hidden bg-stone-100">
+                  <Image
+                    src={EVENT_IMAGES[events.indexOf(event) % EVENT_IMAGES.length]}
+                    alt={event.name}
+                    fill
+                    loading="lazy"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  {/* Category badge over image */}
+                  <span
+                    className={`absolute top-3 left-3 rounded-full px-3 py-1 text-xs font-semibold shadow ${CATEGORY_COLORS[event.category]}`}
+                  >
+                    {CATEGORY_LABELS[event.category]}
+                  </span>
+                </div>
 
+                <div className="flex flex-col flex-1 p-6">
                 {/* Name */}
-                <h3 className="mt-3 text-lg font-bold text-stone-900 leading-snug">
+                <h3 className="text-lg font-bold text-stone-900 leading-snug">
                   {event.name}
                 </h3>
 
@@ -136,6 +155,7 @@ export default function EventsSection() {
                 >
                   View Details
                 </a>
+                </div>
               </div>
             ))}
           </div>
