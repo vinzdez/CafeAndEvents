@@ -24,9 +24,9 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="AID Station Cafe"
-            width={44}
-            height={44}
-            className=""
+            width={72}
+            height={72}
+            className="bg-transparent"
           />
           <span className="text-sm font-bold tracking-[0.15em] text-white uppercase">
             AID Station Cafe
