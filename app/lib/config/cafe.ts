@@ -1,9 +1,9 @@
 /** Cafe configuration — update with real info before go-live */
 export const CAFE = {
-  name: "Brew & Stride",
-  tagline: "Where every cup fuels the next adventure.",
+  name: "AID Station Cafe",
+  tagline: "Where mountain running meets coffee culture.",
   description:
-    "A cozy specialty coffee shop and community hub for runners and cyclists. We serve single-origin espresso, cold brew, and post-race recovery plates. Whether you're fueling up before a race or winding down after a ride, you'll find a welcoming spot here.",
+    "A cozy specialty coffee shop and community hub for trail runners and cyclists in La Trinidad, Benguet. We serve great coffee and post-race recovery plates. Whether you're fueling up before a race or winding down after a mountain run, you'll find a welcoming spot here.",
   offerings: [
     { label: "Specialty Coffee", icon: "☕" },
     { label: "Post-Race Meals", icon: "🍳" },

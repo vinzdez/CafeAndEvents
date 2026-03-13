@@ -18,6 +18,10 @@ export const metadata: Metadata = {
     template: `%s | ${CAFE.name}`,
   },
   description: CAFE.description,
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
   openGraph: {
     type: "website",
     siteName: CAFE.name,
