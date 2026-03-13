@@ -7,6 +7,7 @@ import AboutSection from "@/app/components/AboutSection";
 import Gallery from "@/app/components/Gallery";
 import EventsSection from "@/app/components/EventsSection";
 import Footer from "@/app/components/Footer";
+import ErrorBoundary from "@/app/components/ErrorBoundary";
 
 export default function HomePage() {
   return (
@@ -14,7 +15,9 @@ export default function HomePage() {
       <Hero />
       <AboutSection />
       <Gallery />
-      <EventsSection />
+      <ErrorBoundary>
+        <EventsSection />
+      </ErrorBoundary>
       <Footer />
     </>
   );

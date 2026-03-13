@@ -129,6 +129,7 @@ export default function EventsSection() {
                 <div className="flex-1" />
 
                 {/* CTA */}
+                {/* TODO EVE-01: /events/[id] route is implemented in EVE-01 */}
                 <a
                   href={`/events/${event.id}`}
                   className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-stone-900 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-amber-500"
