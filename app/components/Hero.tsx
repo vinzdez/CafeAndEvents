@@ -2,7 +2,6 @@
  * @satisfies CAF-01-01-AC-02 Hero section displays cafe name, tagline, and branding
  * @satisfies CAF-01-01-AC-05 Page is fully responsive (mobile, tablet, desktop)
  */
-import Image from "next/image";
 
 const FEATURES = [
   { label: "Weekly Trail Runs", icon: "🏔️" },
@@ -12,17 +11,14 @@ const FEATURES = [
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-stone-900">
-      {/* Background image */}
-      <Image
-        src="/hero.png"
-        alt="Trail runner on a mountain"
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
-      />
-
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden bg-stone-900"
+      style={{
+        backgroundImage: "url('/hero.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       {/* Dark gradient overlay — stronger on left for text legibility */}
       <div className="absolute inset-0 bg-gradient-to-r from-stone-900/90 via-stone-900/60 to-stone-900/20" />
       <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-transparent to-transparent" />
